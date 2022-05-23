@@ -1,9 +1,9 @@
 let bookList = JSON.parse(localStorage.getItem('bookList'));
 
-function removeBook(title, element) {
+function removeBook(title, author, element) {
   element.remove();
   for (let i = 0; i < bookList.length; i += 1) {
-    if (bookList[i].title === title) {
+    if (bookList[i].title === title && bookList[i].author === author) {
       bookList.splice(i, 1);
       localStorage.setItem('bookList', JSON.stringify(bookList));
     }
@@ -24,7 +24,7 @@ function addBookElement(title, author) {
     removeBotton.type = 'button';
     removeBotton.innerText = 'Remove';
     removeBotton.addEventListener('click', () => {
-      removeBook(title, bookContainer);
+      removeBook(title, author, bookContainer);
     });
     bookContainer.appendChild(removeBotton);
     const horizontalSeperator = document.createElement('hr');
