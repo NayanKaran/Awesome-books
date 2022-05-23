@@ -4,7 +4,7 @@ function removeBook(title, element) {
   element.remove();
   for (let i = 0; i < bookList.length; i += 1) {
     if (bookList[i].title === title) {
-      bookList.splice(i);
+      bookList.splice(i, 1);
       localStorage.setItem('bookList', JSON.stringify(bookList));
     }
   }
