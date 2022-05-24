@@ -41,7 +41,7 @@ hr {
 }
 
 #book-list-container > div:nth-child(odd) {
-  background-color: lightgrey;
+  background-color: #e7e7e7;
 }
 
 button {
@@ -52,7 +52,9 @@ button {
   font-size: larger;
   font-weight: bold;
   box-shadow: 3px 3px;
-height: fit-content;align-self: center;}
+  height: min-content;
+  align-self: center;
+}
 
 #submit-btn {
   float: right;
