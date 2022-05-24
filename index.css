@@ -1,5 +1,6 @@
 body {
   font-family: cursive;
+  min-width: 375px;
 }
 
 main {
