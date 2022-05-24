@@ -31,7 +31,7 @@ hr {
 .book {
   display: flex;
   gap: 12px;
-  padding: 8px;
+  padding: 8px 12px;
 }
 
 #book-list-container {
