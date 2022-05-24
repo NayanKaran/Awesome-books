@@ -8,6 +8,11 @@ main {
   align-items: center;
 }
 
+#books-section {
+  display: flex;
+  flex-direction: column;
+}
+
 #books-section > h2 {
   text-align: center;
 }
@@ -32,6 +37,8 @@ hr {
 
 #book-list-container {
   border: 4px solid black;
+  min-height: 50px;
+  min-width: 340px;
 }
 
 #book-list-container > div:nth-child(odd) {
