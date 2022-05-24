@@ -27,13 +27,20 @@ To get a local copy up and running follow these simple example steps.
 
 - Open the index.html file.
 
-## Author
+## Authors
 
 👤 **Debabrata Mandal (Nayan Karan)**
 
 - GitHub: [@NayanKaran](https://github.com/NayanKaran)
 - Twitter: [@bapidebabrata](https://twitter.com/bapidebabrata)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/debabrata-mandal-83461696/)
+
+👤 **Chahine Mahdhi**
+
+I am an aspiring web developer from Tunisia.
+- GitHub: [@chahine-mahdhi](https://github.com/chahine-mahdhi)
+- Twitter: [@cmahdhi85](https://twitter.com/cmahdhi85)
+- LinkedIn: [chahine-mahdhi-38202649](https://www.linkedin.com/in/chahine-mahdhi-38202649/)
 
 ## 🤝 Contributing
 
