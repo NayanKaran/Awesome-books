@@ -52,7 +52,7 @@ button {
   font-size: larger;
   font-weight: bold;
   box-shadow: 3px 3px;
-}
+height: fit-content;align-self: center;}
 
 #submit-btn {
   float: right;
@@ -60,12 +60,4 @@ button {
 
 input {
   border: solid 4px;
-}
-
-#book-list-container > div > h3:nth-child(1)::after {
-  content: '" by';
-}
-
-#book-list-container > div > h3:nth-child(1)::before {
-  content: '"';
 }
