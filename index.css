@@ -1,16 +1,23 @@
 body {
   font-family: cursive;
-  min-width: 375px;
+  margin: 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 320px;
+  box-sizing: border-box;
 }
 
 h3 {
   margin: 0;
+}
+
+#books-section {
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
 #books-section > h2 {
@@ -38,7 +45,6 @@ hr {
 #book-list-container {
   border: 4px solid black;
   min-height: 48px;
-  min-width: 340px;
 }
 
 #book-list-container > div:nth-child(odd) {
