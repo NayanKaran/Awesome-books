@@ -23,6 +23,7 @@ hr {
   border-bottom: solid 4px black;
   margin-top: 32px;
 }
+
 .book {
   display: flex;
   gap: 12px;
@@ -50,6 +51,7 @@ button {
 #submit-btn {
   float: right;
 }
+
 input {
   border: solid 4px;
 }
