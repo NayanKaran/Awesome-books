@@ -55,3 +55,11 @@ button {
 input {
   border: solid 4px;
 }
+
+#book-list-container > div > h3:nth-child(1)::after {
+  content: '" by';
+}
+
+#book-list-container > div > h3:nth-child(1)::before {
+  content: '"';
+}
