@@ -27,6 +27,7 @@ class Book {
   addBookElement() {
     const bookListContainer = document.getElementById('book-list-container');
     const bookContainer = document.createElement('div');
+    bookContainer.classList.add('book');
     {
       const bookTitle = document.createElement('h3');
       bookTitle.innerText = this.title;
