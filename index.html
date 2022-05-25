@@ -1,28 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome books</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <a class="nav-title" href="./index.html">
+          <h1>Awesome Books</h1>
+        </a>
+        <ul class="nav-list">
+          <li id="list-link">List</li>
+          <li id="add-new-link">Add New</li>
+          <li id="contact-link">Contact</li>
+        </ul>
+      </nav>
+      <div id="time"></div>
+    </header>
     <main>
-            <div id="books-section">
-                <h2>All awesome books</h2>
-                <div id="book-list-container">
-                </div>
-            </div>
-            <hr id="separator-line"/>
-            <div id="form-container">
-                <h2>Add a new book</h2>
-                <form method="post" id="add-book-form">
-                    <input type="text" id="title" name="title" placeholder="Title" required><br><br>
-                    <input type="text" id="author" name="author" placeholder="Author" required><br><br>
-                    <button id="submit-btn" type="submit">Add</button>
-                </form> 
-            </div>
+      <section id="books-section">
+        <h2>All awesome books</h2>
+        <div id="book-list-container"></div>
+      </section>
+      <section id="form-container">
+        <h2>Add a new book</h2>
+        <form method="post" id="add-book-form">
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Title"
+            required
+          /><br /><br />
+          <input
+            type="text"
+            id="author"
+            name="author"
+            placeholder="Author"
+            required
+          /><br /><br />
+          <button id="submit-btn" type="submit">Add</button>
+        </form>
+      </section>
+      <section id="contact-page">
+        <h2>Contact Information</h2>
+        <p>
+          Do have any questions or you just want to say "Hello"?
+          <br />
+          You can reach out to us!
+        </p>
+        <ul>
+          <li>Our e-mail: mail@mail.com</li>
+          <li>Our phone number : 0043215456</li>
+          <li>Our address : Steetname 22, 4555 city, Country</li>
+        </ul>
+      </section>
     </main>
+    <footer>
+      <span>Copyright @ 2022</span>
+    </footer>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
