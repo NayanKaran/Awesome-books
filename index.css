@@ -3,6 +3,11 @@ body {
   padding: 16px;
   max-width: 1440px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 main {
