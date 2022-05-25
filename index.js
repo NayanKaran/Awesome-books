@@ -3,6 +3,23 @@ const formBookTitle = form.querySelector('input[name="title"]');
 const formBookAuthor = form.querySelector('input[name="author"]');
 const bookList = JSON.parse(localStorage.getItem('bookList')) || [];
 
+const displayDate = () => {
+  const date = new Date();
+  const options = {
+    weekday: undefined,
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+  const [month, time] = [
+    date.toLocaleDateString(undefined, options),
+    date.toLocaleTimeString().toLocaleLowerCase(),
+  ];
+  document.getElementById('time').innerHTML = `${month}, ${time}`;
+};
+displayDate();
+setInterval(displayDate, 1000);
+
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -17,7 +34,10 @@ class Book {
   removeBook(bookContainer) {
     bookContainer.remove();
     for (let i = 0; i < bookList.length; i += 1) {
-      if (bookList[i].title === this.title && bookList[i].author === this.author) {
+      if (
+        bookList[i].title === this.title
+        && bookList[i].author === this.author
+      ) {
         bookList.splice(i, 1);
         localStorage.setItem('bookList', JSON.stringify(bookList));
       }
@@ -29,9 +49,12 @@ class Book {
     const bookContainer = document.createElement('div');
     bookContainer.classList.add('book');
     {
-      const bookDetails = document.createElement('h3');
-      bookDetails.innerText = `"${this.title}" by ${this.author}`;
-      bookContainer.appendChild(bookDetails);
+      const bookTitle = document.createElement('h3');
+      bookTitle.innerText = this.title;
+      bookContainer.appendChild(bookTitle);
+      const bookAuthor = document.createElement('h3');
+      bookAuthor.innerText = this.author;
+      bookContainer.appendChild(bookAuthor);
       const removeBotton = document.createElement('button');
       removeBotton.type = 'button';
       removeBotton.innerText = 'Remove';
@@ -61,3 +84,31 @@ if (bookList) {
     newBook.addBookElement();
   }
 }
+
+const listLink = document.getElementById('list-link');
+const addBookLink = document.getElementById('add-new-link');
+const contactLink = document.getElementById('contact-link');
+const bookSection = document.getElementById('books-section');
+const formContainer = document.getElementById('form-container');
+const contactPage = document.getElementById('contact-page');
+
+listLink.addEventListener('click', () => {
+  bookSection.style.display = 'flex';
+  bookSection.style.flexDirection = 'column';
+  formContainer.style.display = 'none';
+  contactPage.style.display = 'none';
+});
+
+addBookLink.addEventListener('click', () => {
+  formContainer.style.display = 'flex';
+  formContainer.style.flexDirection = 'column';
+  bookSection.style.display = 'none';
+  contactPage.style.display = 'none';
+});
+
+contactLink.addEventListener('click', () => {
+  contactPage.style.display = 'flex';
+  contactPage.style.flexDirection = 'column';
+  bookSection.style.display = 'none';
+  formContainer.style.display = 'none';
+});
