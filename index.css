@@ -95,6 +95,7 @@ h1 {
 #books-section {
   box-sizing: border-box;
   padding: 0 10px;
+  width: 100%;
 }
 
 #books-section > h2 {

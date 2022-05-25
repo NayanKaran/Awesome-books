@@ -49,12 +49,9 @@ class Book {
     const bookContainer = document.createElement('div');
     bookContainer.classList.add('book');
     {
-      const bookTitle = document.createElement('h3');
-      bookTitle.innerText = this.title;
-      bookContainer.appendChild(bookTitle);
-      const bookAuthor = document.createElement('h3');
-      bookAuthor.innerText = this.author;
-      bookContainer.appendChild(bookAuthor);
+      const bookDetails = document.createElement('h3');
+      bookDetails.innerText = `"${this.title}" by ${this.author}`;
+      bookContainer.appendChild(bookDetails);
       const removeBotton = document.createElement('button');
       removeBotton.type = 'button';
       removeBotton.innerText = 'Remove';
