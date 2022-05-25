@@ -17,6 +17,7 @@ main {
   min-width: 320px;
   box-sizing: border-box;
   margin: 52px;
+  margin-bottom: auto;
 }
 
 header > nav > a {
