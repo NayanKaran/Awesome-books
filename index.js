@@ -93,6 +93,9 @@ const formContainer = document.getElementById('form-container');
 const contactPage = document.getElementById('contact-page');
 
 listLink.addEventListener('click', () => {
+  listLink.style.color = 'blue';
+  addBookLink.style.color = 'black';
+  contactLink.style.color = 'black';
   bookSection.style.display = 'flex';
   bookSection.style.flexDirection = 'column';
   formContainer.style.display = 'none';
@@ -100,6 +103,9 @@ listLink.addEventListener('click', () => {
 });
 
 addBookLink.addEventListener('click', () => {
+  listLink.style.color = 'black';
+  addBookLink.style.color = 'blue';
+  contactLink.style.color = 'black';
   formContainer.style.display = 'flex';
   formContainer.style.flexDirection = 'column';
   bookSection.style.display = 'none';
@@ -107,6 +113,9 @@ addBookLink.addEventListener('click', () => {
 });
 
 contactLink.addEventListener('click', () => {
+  listLink.style.color = 'black';
+  addBookLink.style.color = 'black';
+  contactLink.style.color = 'blue';
   contactPage.style.display = 'flex';
   contactPage.style.flexDirection = 'column';
   bookSection.style.display = 'none';

@@ -1,6 +1,8 @@
 body {
   font-family: cursive;
-  margin: 0;
+  padding: 16px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 main {
@@ -9,10 +11,79 @@ main {
   align-items: center;
   min-width: 320px;
   box-sizing: border-box;
+  margin: 52px;
+}
+
+header > nav > a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: 24px;
+  border: 4px solid black;
+  padding: 4px 12px;
+  font-weight: bold;
 }
 
 h3 {
   margin: 0;
+}
+
+h1 {
+  margin: 0;
+  text-decoration: none;
+  font-size: large;
+}
+
+#list-link {
+  color: blue;
+}
+
+#form-container {
+  display: none;
+}
+
+#contact-page {
+  display: none;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  border: 4px solid black;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 4px;
+}
+
+.nav-list > li {
+  border-left: 2px solid black;
+  padding-left: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-list > li:nth-child(1) {
+  border: none;
+}
+
+#time {
+  align-self: flex-end;
+  font-weight: 600;
 }
 
 #books-section {
@@ -21,6 +92,16 @@ h3 {
 }
 
 #books-section > h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+#form-container > h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+#contact-page > h2 {
   text-align: center;
 }
 
@@ -69,4 +150,6 @@ button {
 
 input {
   border: solid 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
