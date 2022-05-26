@@ -1,6 +1,12 @@
 # Awesome-books
 A webapp to save a list of books.
 
+## Wireframe Used
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/33381784/170239790-59830354-4031-44cf-bcc5-4c68da579355.png" alt="Basic UI"/>
+</p>
+
 ## Built With
 
 - HTML, CSS
