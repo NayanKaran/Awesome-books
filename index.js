@@ -1,14 +1,14 @@
-import {Book} from "./modules/book.js";
-import { DateTime } from "./modules/luxon.js";
+import bookList from './modules/booklist.js';
+import Book from './modules/book.js';
+import { DateTime } from './modules/luxon.js';
 
 const form = document.getElementById('add-book-form');
 const formBookTitle = form.querySelector('input[name="title"]');
 const formBookAuthor = form.querySelector('input[name="author"]');
-const bookList = JSON.parse(localStorage.getItem('bookList')) || [];
 
 const displayDate = () => {
   const dt = DateTime.now();
-  document.getElementById('time').innerHTML = `${dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS)}`; 
+  document.getElementById('time').innerHTML = `${dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS)}`;
 };
 displayDate();
 setInterval(displayDate, 1000);
