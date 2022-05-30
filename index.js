@@ -1,70 +1,17 @@
+import {Book} from "./modules/book.js";
+import { DateTime } from "./modules/luxon.js";
+
 const form = document.getElementById('add-book-form');
 const formBookTitle = form.querySelector('input[name="title"]');
 const formBookAuthor = form.querySelector('input[name="author"]');
 const bookList = JSON.parse(localStorage.getItem('bookList')) || [];
 
 const displayDate = () => {
-  const date = new Date();
-  const options = {
-    weekday: undefined,
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  };
-  const [month, time] = [
-    date.toLocaleDateString(undefined, options),
-    date.toLocaleTimeString().toLocaleLowerCase(),
-  ];
-  document.getElementById('time').innerHTML = `${month}, ${time}`;
+  const dt = DateTime.now();
+  document.getElementById('time').innerHTML = `${dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS)}`; 
 };
 displayDate();
 setInterval(displayDate, 1000);
-
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-
-  addBook() {
-    bookList.push(this);
-    localStorage.setItem('bookList', JSON.stringify(bookList));
-  }
-
-  removeBook(bookContainer) {
-    bookContainer.remove();
-    for (let i = 0; i < bookList.length; i += 1) {
-      if (
-        bookList[i].title === this.title
-        && bookList[i].author === this.author
-      ) {
-        bookList.splice(i, 1);
-        localStorage.setItem('bookList', JSON.stringify(bookList));
-      }
-    }
-  }
-
-  addBookElement() {
-    const bookListContainer = document.getElementById('book-list-container');
-    const bookContainer = document.createElement('div');
-    bookContainer.classList.add('book');
-    {
-      const bookDetails = document.createElement('h3');
-      bookDetails.innerText = `"${this.title}" by ${this.author}`;
-      bookContainer.appendChild(bookDetails);
-      const removeBotton = document.createElement('button');
-      removeBotton.type = 'button';
-      removeBotton.innerText = 'Remove';
-      removeBotton.addEventListener('click', () => {
-        this.removeBook(bookContainer);
-      });
-      bookContainer.appendChild(removeBotton);
-      const horizontalSeperator = document.createElement('hr');
-      bookContainer.appendChild(horizontalSeperator);
-    }
-    bookListContainer.appendChild(bookContainer);
-  }
-}
 
 form.addEventListener('submit', (event) => {
   const newBook = new Book(formBookTitle.value, formBookAuthor.value);
